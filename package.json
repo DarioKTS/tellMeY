@@ -1,0 +1,23 @@
+{
+  "name": "tellMeY",
+  "version": "1.0.0",
+  "description": "Tiny runtime type assertion utility for plain JavaScript. Like assert, but for types.",
+  "main": "src/index.js",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "keywords": [
+    "typecheck",
+    "runtime",
+    "assert",
+    "validation",
+    "javascript",
+    "utility"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
