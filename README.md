@@ -26,8 +26,8 @@ Just simple, human-friendly _runtime_ sanity checks and readable error responses
 - 🧱 Supports:
   - Nested objects
   - Typed arrays
-  - Tuple-style array checks
-  - Custom instance validation
+  - Tuple-style array and object checks
+  - Custom Classes instance validation
   - Function wrapping with automatic argument validation
 
 ---
