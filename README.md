@@ -52,7 +52,7 @@ tY1_L(42.5, 'int'); // ⚠️ Warning in console, returns 42.5 unmodified
 ```js
 const [a, b] = tY([[42, 'int'], ['hello', 'str']]);  // ✅ returns [42, 'hello']
 
-tY([[true, 'numb']]);  // ❌ Throws: In argument 0: Expected Number, got Boolean
+tY([[true, 'numb']]);  // ❌ TypeAssertionError: In argument 0: Expected Number, got Boolean
 tY_L([[true, 'numb']]); // ⚠️ Logs warning, returns `[true]`
 ```
 ### 🔗 Inline use
@@ -66,7 +66,7 @@ someOtherFn(x, ...tY_L([[y, 'regexp'], [z, 'date']])); // loose variant
 ### 🔁 Homogeneous array
 ```js
 tY1([1, 2, 3], ['int']); // ✅ Every element is an int, returns checked array
-tY1([1, 2, 'x'], ['int']); // ❌ At index 2: Expected Integer, got String
+tY1([1, 2, 'x'], ['int']); // ❌ TypeAssertionError: At index 2: Expected Integer, got String
 ```
 ### 📦 Typed Tuple
 ```js
@@ -102,7 +102,7 @@ const schema = {
 };
 
 tY1(user, schema); 
-// ❌ In key 'stats': In key 'age': Expected Integer, got String
+// ❌ TypeAssertionError: In key 'stats': In key 'age': Expected Integer, got String
 ```
 ## 🔥 Notes on Custom Object and Tuple Type Definition / Behavior
  - For arrays with multiple types (tuples): only the first N items are checked (N = type.length). Extra values are left untouched/ignored. 
@@ -172,7 +172,8 @@ It simply exposes and organizes some of JavaScript’s built-in type checking lo
 `Object.prototype.toString.call(yourValue)` in a more accessible way (IMO, ofc).
 
 ## 🤹‍♀️ Philosophy
-ChatGPT suggested: “tell me Y” — because good code asks good questions."
+ChatGPT suggested:  
+“tell me Y” — because good code asks good questions."  
 ..Sure..I guess.
 
 ## License
