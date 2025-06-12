@@ -3,8 +3,8 @@
 
 > Think `assert`, but for types — without TypeScript, decorators, annotations or classes.
 
-> “tellMe Y” because of a
->     _“JavaScript : WHY?!”_
+> “tellMe Y” because of a  
+>     _“JavaScript : WHY?!”_  
 > at a runtime crash, with a sad clown face.
 
 ---
