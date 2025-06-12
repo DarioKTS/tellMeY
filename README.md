@@ -1,6 +1,5 @@
 # tellMeY
 **Tiny runtime type check utility for _plain JavaScript_.**
-Think `assert`, but for types — without TypeScript, decorators, annotations or classes.
 <p align="center">
   <img src="assets/tellMeY.png" alt="Project Logo" width="500"/>
 </p>
@@ -13,7 +12,7 @@ Think `assert`, but for types — without TypeScript, decorators, annotations or
 ## 📦 Why Not TypeScript?
 This library is **intentionally runtime-only** and **plain JS-oriented**.  
 No build step. No annotations. No decorators.
-Just simple, human-friendly _runtime_ sanity checks.
+Just simple, human-friendly _runtime_ sanity checks and readable error responses.
 
 ---
 
