@@ -143,8 +143,8 @@ class Moustache {}
 const prime = new Moustache();
 instanceOf(prime, Moustache); // ✅
 
-instanceOf(Casey , Moustache); 
-// ❌ TypeAssertionError: Expected instance of Moustache, got Casey
+instanceOf(casey , Moustache); 
+// ❌ TypeAssertionError: Expected instance of Moustache, got casey
 ```
 ### 🔍 Supported Types
 You can run tYpeNicks() at any time to list all available types' nicknames, however:
