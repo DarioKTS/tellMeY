@@ -1,6 +1,9 @@
 # tellMeY
 **Tiny runtime type assertion utility for _plain JavaScript_.**
 Think `assert`, but for types — without TypeScript, decorators, annotations or classes.
+<p align="center">
+  <img src="assets/tellMeY.png" alt="Project Logo" width="500"/>
+</p>
 
 > Because of a  
 > **_“JavaScript : WHY?!”_**  
