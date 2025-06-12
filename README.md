@@ -1,16 +1,16 @@
 # tellMeY
 **Tiny runtime type assertion utility for _plain JavaScript_.**
 
-> Think `assert`, but for types — without TypeScript, decorators, or classes.
+> Think `assert`, but for types — without TypeScript, decorators, annotations or classes.
 
-> “tell me Y” – because we’ve all yelled _“WHY?!”_ at a runtime crash like melodramatic clowns.
+> “tell me Y” – because we all yell _“WHY?!”_ at a runtime crash, like melodramatic clowns.
 
 ---
 
 ## 📦 Why Not TypeScript?
 
-Because this library is **intentionally runtime-only** and **plain JS-oriented**.  
-No build step. No annotations. No decorators. No typesystem magic.  
+This library is **intentionally runtime-only** and **plain JS-oriented**.  
+No build step. No annotations. No decorators.
 Just simple, human-friendly _runtime_ sanity checks.
 
 ---
