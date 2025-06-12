@@ -1,4 +1,4 @@
-//tY.js
+// src/index.js
 
 class TypeAssertionError extends Error {
     constructor(message) {
