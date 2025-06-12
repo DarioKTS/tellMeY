@@ -108,9 +108,11 @@ tY1(user, schema);
  - For arrays with multiple types (tuples): only the first N items are checked (N = type.length). Extra values are left untouched/ignored. 
  - For typed objects: only the keys defined in the type schema are checked. Extra keys are left untouched/ignored.
 ```
-tY1(['abc', 123, true, 'rainy'], ['str', 'int', 'bool']); // ✅ checks the first 3 elements, passes the 4th untouched, returns the array
+tY1(['abc', 123, true, 'rainy'], ['str', 'int', 'bool']);
+// ✅ checks the first 3 elements, passes the 4th untouched, returns the array
 
-tY1({ name: 'Alice', age: 30 , status:'becoming chubby'}, { name: 'str', age: 'int' }); // ✅ checks name and age, passes the status untouched, returns the object
+tY1({ name: 'Alice', age: 30 , status:'becoming chubby'}, { name: 'str', age: 'int' });
+// ✅ checks name and age, passes the status untouched, returns the object
 ```
 > This makes tY composable and safe to apply even in loosely structured data pipelines.
 
