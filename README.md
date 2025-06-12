@@ -100,9 +100,8 @@ const schema = {
 tY1(user, schema); 
 // ❌ In key 'stats': In key 'age': Expected Integer, got String
 ```
-## 🔥 Notes on Custom Object and Tuple Definition / Behavior
-(...as shown above, meaning not Homogenous Arrays, nor inbuilt JS ones such as Int8Array i.e.)
- - For typed arrays (tuples): only the first N items are checked (N = type.length). Extra values are left untouched/ignored.
+## 🔥 Notes on Custom Object and Tuple Type Definition / Behavior
+ - For arrays with multiple types (tuples): only the first N items are checked (N = type.length). Extra values are left untouched/ignored. 
  - For typed objects: only the keys defined in the type schema are checked. Extra keys are left untouched/ignored.
 > This makes tY composable and safe to apply even in loosely structured data pipelines.
 
