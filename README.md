@@ -7,9 +7,7 @@ Think `assert`, but for types — without TypeScript, decorators, annotations or
 > at a runtime crash, with a sad clown face.
 
 ---
-
 ## 📦 Why Not TypeScript?
-
 This library is **intentionally runtime-only** and **plain JS-oriented**.  
 No build step. No annotations. No decorators.
 Just simple, human-friendly _runtime_ sanity checks.
@@ -153,7 +151,7 @@ You can run tYpeNicks() at any time to list all available types' nicknames, howe
  "weakset", "promise", "err", "arraybuffer", "dataview", "math"]
 ```
 
-## ⚠️ Performance Considerations
+### ⚠️ Performance Considerations
 Like any runtime validation, using tY comes with a computational cost — albeit small in most cases.
 If you find that "tell me Y" significantly impacts your system's performance (e.g. in tight loops or hot paths), 
 consider relocating type checks closer to the data source (e.g., input sanitation, API layers, or serialization boundaries).
@@ -166,6 +164,9 @@ It does NOT modify JavaScript, expands it, or overrides any native behaviour!
 It simply exposes and organizes some of JavaScript’s built-in type checking logic that is hidden in  
 `Object.prototype.toString.call(yourValue)` in a more accessible way (IMO, ofc).
 
-### 🤹‍♀️ Philosophy
+## 🤹‍♀️ Philosophy
 ChatGPT suggested: “tell me Y” — because good code asks good questions."
 ..Sure..I guess.
+
+## License
+MIT - free use
