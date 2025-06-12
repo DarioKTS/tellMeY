@@ -36,9 +36,9 @@ Just simple, human-friendly _runtime_ sanity checks and readable error responses
 The functions provided:  
  -  in their strict version either return the checked value on success, or throw an indexed `TypeAssertionError`;
  -  in their loose version (ending with "_L") will log a readable warning but return the value anyhow;  
- > As opposed to returning a boolean, this simplifies passing on the checked output to toher functions.
-
-..from simple to more and more complex:
+ > As opposed to returning a boolean, this simplifies passing on the checked output to to other functions.
+  
+..from simple to more and more complex:  
 ### 🔒 Basic strict usage (throws on fail)
 ```js
 tY1(42, 'int');     // ✅ OK , returns 42
@@ -164,8 +164,8 @@ If you find that "tell me Y" significantly impacts your system's performance (e.
 consider relocating type checks closer to the data source (e.g., input sanitation, API layers, or serialization boundaries).
 
 __This library is a non-intrusive helper, not a replacement for good engineering practices.__  
-__You can use it selectively, wherever runtime guarantees are helpful — and skip it entirely__  
-__to run free, and Blazingly Fast.__  
+__You can use it selectively, wherever runtime guarantees are helpful__  
+__skip it where needed to run Blazingly Fast and articualte weighted middle grounds.__  
 
 It does NOT modify JavaScript, neither expands it, nor overrides any native behaviour!  
 It simply exposes and organizes some of JavaScript’s built-in type checking logic that is hidden in  
