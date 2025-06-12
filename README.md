@@ -33,20 +33,24 @@ Just simple, human-friendly _runtime_ sanity checks and readable error responses
 ---
 
 ## 📘 Usage
+The functions provided:  
+ -  in their strict version either return the checked value on success, or throw a readable error;
+ -  in their loose version (ending with "_L") will log a readable warning but return the value anyhow;
+As opposed to returning a boolean, this makes passing the checked output as an argument a breeze.
 
+..from simple to more and more complex:
 ### 🔒 Basic strict usage (throws on fail)
-
 ```js
-tY1(42, 'int');     // ✅ OK
+tY1(42, 'int');     // ✅ OK , returns 42
 tY1(42.5, 'int');   // ❌ TypeAssertionError: Expected Integer, got Number
 ```
 ### 🌿 Loose mode (logs warning, returns value anyway)
 ```js
-tY1_L(42.5, 'int'); // ⚠️ Warning in console, returns value unmodified
+tY1_L(42.5, 'int'); // ⚠️ Warning in console, returns 42.5 unmodified
 ```
 ### 🎛️ Multiple arguments: tY and tY_L
 ```js
-const [a, b] = tY([[42, 'int'], ['hello', 'str']]);  // ✅
+const [a, b] = tY([[42, 'int'], ['hello', 'str']]);  // ✅ returns [42, 'hello']
 
 tY([[true, 'numb']]);  // ❌ Throws: In argument 0: Expected Number, got Boolean
 tY_L([[true, 'numb']]); // ⚠️ Logs warning, returns `[true]`
@@ -61,16 +65,16 @@ someOtherFn(x, ...tY_L([[y, 'regexp'], [z, 'date']])); // loose variant
 ## 🧪 Advanced Types
 ### 🔁 Homogeneous array
 ```js
-tY1([1, 2, 3], ['int']); // ✅ Every element is an int
+tY1([1, 2, 3], ['int']); // ✅ Every element is an int, returns checked array
 tY1([1, 2, 'x'], ['int']); // ❌ At index 2: Expected Integer, got String
 ```
 ### 📦 Typed Tuple
 ```js
-tY1(['abc', 123, true], ['str', 'int', 'bool']); // ✅
+tY1(['abc', 123, true], ['str', 'int', 'bool']); // ✅ returns checked array
 ```
 ### 🧱 Object shape
 ```js
-tY1({ name: 'Alice', age: 30 }, { name: 'str', age: 'int' }); // ✅
+tY1({ name: 'Alice', age: 30 }, { name: 'str', age: 'int' }); // ✅ returns checked object
 ```
 
 ### 💡 If your structure is deep, you can define the schema outside and reuse:
@@ -103,6 +107,11 @@ tY1(user, schema);
 ## 🔥 Notes on Custom Object and Tuple Type Definition / Behavior
  - For arrays with multiple types (tuples): only the first N items are checked (N = type.length). Extra values are left untouched/ignored. 
  - For typed objects: only the keys defined in the type schema are checked. Extra keys are left untouched/ignored.
+```
+tY1(['abc', 123, true, 'rainy'], ['str', 'int', 'bool']); // ✅ checks the first 3 elements, passes the 4th untouched, returns the array
+
+tY1({ name: 'Alice', age: 30 , status:'becoming chubby'}, { name: 'str', age: 'int' }); // ✅ checks name and age, passes the status untouched, returns the object
+```
 > This makes tY composable and safe to apply even in loosely structured data pipelines.
 
 
