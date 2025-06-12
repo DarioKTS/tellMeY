@@ -37,21 +37,15 @@ Just simple, human-friendly _runtime_ sanity checks and readable error responses
 ### 🔒 Basic strict usage (throws on fail)
 
 ```js
-import { tY1 } from './tY.js';
-
 tY1(42, 'int');     // ✅ OK
 tY1(42.5, 'int');   // ❌ TypeAssertionError: Expected Integer, got Number
 ```
 ### 🌿 Loose mode (logs warning, returns value anyway)
 ```js
-import { tY1_L } from './tY.js';
-
 tY1_L(42.5, 'int'); // ⚠️ Warning in console, returns value unmodified
 ```
 ### 🎛️ Multiple arguments: tY and tY_L
 ```js
-import { tY, tY_L } from './tY.js';
-
 const [a, b] = tY([[42, 'int'], ['hello', 'str']]);  // ✅
 
 tY([[true, 'numb']]);  // ❌ Throws: In argument 0: Expected Number, got Boolean
