@@ -8,7 +8,7 @@
     ".": "./src/index.js"
   },
   "scripts": {
-    "test": "test/examples.js"
+    "test": "test/tests.js"
   },
   "keywords": [
     "typecheck",
