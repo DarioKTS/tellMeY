@@ -1,10 +1,9 @@
 # tellMeY
 **Tiny runtime type assertion utility for _plain JavaScript_.**
+Think `assert`, but for types — without TypeScript, decorators, annotations or classes.
 
-> Think `assert`, but for types — without TypeScript, decorators, annotations or classes.
-
-> “tellMe Y” because of a  
->     _“JavaScript : WHY?!”_  
+> Because of a  
+> **_“JavaScript : WHY?!”_**  
 > at a runtime crash, with a sad clown face.
 
 ---
@@ -159,11 +158,13 @@ Like any runtime validation, using tY comes with a computational cost — albeit
 If you find that "tell me Y" significantly impacts your system's performance (e.g. in tight loops or hot paths), 
 consider relocating type checks closer to the data source (e.g., input sanitation, API layers, or serialization boundaries).
 
-> This library is a non-intrusive helper, not a replacement for good engineering practices.
-> You can use it selectively, wherever runtime guarantees are helpful — and skip it entirely to run Blazingly Fast.
+__This library is a non-intrusive helper, not a replacement for good engineering practices.__  
+__You can use it selectively, wherever runtime guarantees are helpful — and skip it entirely__  
+__to run free, and Blazingly Fast.__  
 
-It does NOT modify JavaScript, expands it, or overrides any native behaviour!
-It simply exposes and organizes some of JavaScript’s built-in type checking logic in a more accessible way (IMO, ofc).
+It does NOT modify JavaScript, expands it, or overrides any native behaviour!  
+It simply exposes and organizes some of JavaScript’s built-in type checking logic that is hidden in  
+`Object.prototype.toString.call(yourValue)` in a more accessible way (IMO, ofc).
 
 ### 🤹‍♀️ Philosophy
 ChatGPT suggested: “tell me Y” — because good code asks good questions."
