@@ -161,7 +161,7 @@ __This library is a non-intrusive helper, not a replacement for good engineering
 __You can use it selectively, wherever runtime guarantees are helpful — and skip it entirely__  
 __to run free, and Blazingly Fast.__  
 
-It does NOT modify JavaScript, expands it, or overrides any native behaviour!  
+It does NOT modify JavaScript, noeither expands it, nor overrides any native behaviour!  
 It simply exposes and organizes some of JavaScript’s built-in type checking logic that is hidden in  
 `Object.prototype.toString.call(yourValue)` in a more accessible way (IMO, ofc).
 
