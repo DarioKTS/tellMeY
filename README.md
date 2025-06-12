@@ -34,7 +34,7 @@ Just simple, human-friendly _runtime_ sanity checks and readable error responses
 
 ## 📘 Usage
 The functions provided:  
- -  in their strict version either return the checked value on success, or throw a readable error;
+ -  in their strict version either return the checked value on success, or throw an indexed `TypeAssertionError`;
  -  in their loose version (ending with "_L") will log a readable warning but return the value anyhow;
 As opposed to returning a boolean, this makes passing the checked output as an argument a breeze.
 
