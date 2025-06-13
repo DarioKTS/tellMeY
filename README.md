@@ -38,7 +38,7 @@ The functions provided:
  -  in their loose version (ending with "_L") will log a readable warning but return the value anyhow;  
  > As opposed to returning a boolean, this simplifies passing on the checked output to to other functions.
   
-..from simple to more and more complex:  
+..from simple to complex:  
 ### 🔒 Basic strict usage (throws on fail)
 ```js
 tY1(42, 'int');     // ✅ OK , returns 42
@@ -56,6 +56,7 @@ const [a, b] = tY([[42, 'int'], ['hello', 'str']]);  // ✅ returns [42, 'hello'
 tY([[true, 'numb'], [42, 'int']]);  // ❌ TypeAssertionError: In argument 0: Expected Number, got Boolean
 tY_L([[true, 'numb']],[42, 'int']); // ⚠️ Logs warning, returns `[true, 42]`
 ```
+> Take notice of the structure of `TypeAssertionError` - it will help you identify the issue ('whY?').
 ### 🔗 Inline use
 ... you may want to:
 ```js
