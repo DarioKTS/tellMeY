@@ -61,7 +61,7 @@ tY_L([[true, 'numb']],[42, 'int']); // ⚠️ Logs warning, returns `[true, 42]`
 ... you may want to:
 ```js
 function someFunction(a,b,c,d){ -yourLogic-};
-fucntion someOtherFunction(x,y,z){-yourLogic-};
+function someOtherFunction(x,y,z){-yourLogic-};
 
 someFunction(a, ...tY([[b, 'f32arr'], [c, 'uint8arr']]), d); //strict variant
 someOtherFn(x, ...tY_L([[y, 'regexp'], [z, 'date']])); // loose variant
