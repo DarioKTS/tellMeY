@@ -36,8 +36,8 @@ Just simple, human-friendly _runtime_ sanity checks and readable error responses
 The functions provided:  
  -  in their strict version either return the checked value on success, or throw an indexed `TypeAssertionError`;
  -  in their loose version (ending with "_L") will log a readable warning but return the value anyhow;  
- > As opposed to returning a boolean( i.e. `Array.isArray(val)`), this simplifies passing on the checked output to to other functions.
-  
+ > As opposed to returning a boolean( i.e. `Array.isArray(val)`), this simplifies passing on the checked output to to other functions.  
+
 ..from simple to complex:  
 ### 🔒 Basic strict usage (throws on fail)
 ```js
