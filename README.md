@@ -49,6 +49,7 @@ tY1(42.5, 'int');   // ❌ TypeAssertionError: Expected Integer, got Number
 tY1_L(42.5, 'int'); // ⚠️ Warning in console, returns 42.5 unmodified
 ```
 ### 🎛️ Multiple arguments: tY and tY_L
+`tY` ad `tY_L` accept an array of [value, type] pairs  and return the array of checked values.
 ```js
 const [a, b] = tY([[42, 'int'], ['hello', 'str']]);  // ✅ returns [42, 'hello']
 
@@ -58,6 +59,9 @@ tY_L([[true, 'numb']],[42, 'int']); // ⚠️ Logs warning, returns `[true, 42]`
 ### 🔗 Inline use
 ... you may want to:
 ```js
+function someFunction(a,b,c,d){ -yourLogic-};
+fucntion someOtherFunction(x,y,z){-yourLogic-};
+
 someFunction(a, ...tY([[b, 'f32arr'], [c, 'uint8arr']]), d); //strict variant
 someOtherFn(x, ...tY_L([[y, 'regexp'], [z, 'date']])); // loose variant
 ```
@@ -112,7 +116,7 @@ tY1(['abc', 123, true, 'rainy'], ['str', 'int', 'bool']);
 // ✅ checks the first 3 elements, passes the 4th untouched, returns the array
 
 tY1({ name: 'Alice', age: 30 , status:'becoming chubby'}, { name: 'str', age: 'int' });
-// ✅ checks name and age, passes the status untouched, returns the object
+// ✅ checks name and age, passes status untouched, returns the object
 ```
 > This makes tY composable and safe to apply even in loosely structured data pipelines.
 
