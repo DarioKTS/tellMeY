@@ -179,7 +179,7 @@ It simply exposes and organizes some of JavaScript’s built-in type checking lo
 ## 🤹‍♀️ Philosophy
 ChatGPT suggested:  
 “tell me Y” — because good code asks good questions."  
-..Sure..I guess.
+:rofl: ...i wanted answers! :rofl:
 
 ## License
 MIT - free use
