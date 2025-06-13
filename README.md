@@ -52,8 +52,8 @@ tY1_L(42.5, 'int'); // ⚠️ Warning in console, returns 42.5 unmodified
 ```js
 const [a, b] = tY([[42, 'int'], ['hello', 'str']]);  // ✅ returns [42, 'hello']
 
-tY([[true, 'numb']]);  // ❌ TypeAssertionError: In argument 0: Expected Number, got Boolean
-tY_L([[true, 'numb']]); // ⚠️ Logs warning, returns `[true]`
+tY([[true, 'numb'], [42, 'int']]);  // ❌ TypeAssertionError: In argument 0: Expected Number, got Boolean
+tY_L([[true, 'numb']],[42, 'int']); // ⚠️ Logs warning, returns `[true, 42]`
 ```
 ### 🔗 Inline use
 ... you may want to:
