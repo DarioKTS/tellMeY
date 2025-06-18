@@ -35,8 +35,7 @@ const nicks = {
     promise: "Promise",
     err: "Error",
     arraybuffer: "ArrayBuffer",
-    dataview: "DataView",
-    math: "Math"
+    dataview: "DataView"
 };
 
 const typeOfMap = {
