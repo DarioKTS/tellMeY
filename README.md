@@ -6,7 +6,7 @@
 
 > Because of a  
 > **_“JavaScript : WHY?!”_**  
-> at a runtime crash, with a sad clown face.
+>  with a sad clown face.
 
 ---
 ## 📦 Why Not TypeScript?
